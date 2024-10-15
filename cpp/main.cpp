@@ -42,9 +42,9 @@ struct Key {
     // c++20
     // bool operator==(const Key rhs) const = default;
 
-    // bool operator==(const Key rhs) const {
-    //     return first == rhs.first&& second == rhs.second;
-    // }
+    bool operator==(const Key rhs) const {
+        return first == rhs.first&& second == rhs.second;
+    }
 };
 struct KeyHasher {
     size_t operator()(const Key& key) const noexcept {
